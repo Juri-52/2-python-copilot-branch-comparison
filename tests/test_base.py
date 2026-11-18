@@ -41,3 +41,30 @@ def test_empty_inventory():
     inventory = Inventory([])
 
     assert inventory.get_all() == []
+
+
+def test_category_report():
+    products = [
+        Product(1, "ノート", "文房具", 250, 8),
+        Product(2, "緑茶", "飲料", 150, 6),
+        Product(3, "ティッシュ", "日用品", 200, 2),
+    ]
+
+    report = Inventory(products).get_category_report()
+
+    assert list(report) == ["文房具", "飲料", "日用品", "全体"]
+    assert report["文房具"] == {"count": 1, "stock": 8, "amount": 2000}
+    assert report["飲料"] == {"count": 1, "stock": 6, "amount": 900}
+    assert report["日用品"] == {"count": 1, "stock": 2, "amount": 400}
+    assert report["全体"] == {"count": 3, "stock": 16, "amount": 3300}
+
+
+def test_empty_category_report():
+    report = Inventory([]).get_category_report()
+
+    assert report == {
+        "文房具": {"count": 0, "stock": 0, "amount": 0},
+        "飲料": {"count": 0, "stock": 0, "amount": 0},
+        "日用品": {"count": 0, "stock": 0, "amount": 0},
+        "全体": {"count": 0, "stock": 0, "amount": 0},
+    }

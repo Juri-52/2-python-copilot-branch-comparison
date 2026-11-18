@@ -44,6 +44,7 @@ python3 -m venv .venv
 | 入力 | mainの配布時の動作 |
 | --- | --- |
 | 1 | 商品一覧を表示する |
+| 2 | 文房具、飲料、日用品ごとの在庫レポートと全体の合計を表示する |
 | 0 | 終了する |
 
 
@@ -53,7 +54,7 @@ python3 -m venv .venv
 | --- | --- |
 | product.py | Product。id、name、category、price、stockを持ち、info()で表示用の文字列を返す |
 | storage.py | load_products()がJSONを読み、Productのリストを返す |
-| inventory.py | Inventoryが商品リストを保持し、get_all()で一覧のコピーを返す |
+| inventory.py | Inventoryが商品リストを保持し、一覧のコピーと分類別レポートを返す |
 | main.py | 商品の読み込み、メニュー、一覧表示 |
 | data/products.json | 架空の商品10件 |
 | tests/test_base.py | 既存の動作を確認するテスト |
