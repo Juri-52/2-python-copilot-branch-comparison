@@ -31,6 +31,12 @@
 - ブランチ: `feature/category-report`。コミットとmainへのマージは学生本人が実施する。
 
 ```
+commit 6d3174b2ddc90245d175accbeef5d9fc3fb4f97b (HEAD -> feature/category-report)
+Author: Juri <5251016@st.hsc.ac.jp>
+Date:   Wed Nov 18 10:56:56 2026 +0900
+
+    在庫レポート機能を追加し、分類別の集計と全体の合計を表示するように変更
+
 commit 55ce525bd1f4625f31e83ef38d90b5b2af0337bf (HEAD -> feature/category-report)
 Author: Juri <5251016@st.hsc.ac.jp>
 Date:   Wed Nov 18 10:44:18 2026 +0900
